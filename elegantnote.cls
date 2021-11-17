@@ -373,7 +373,7 @@
   \edef\1{\the#1}
   \ifx\1\empty}
 
-\newtoks\version
+\newtoks\docversion
 \newtoks\institute
 
 \def \ifempty#1{
@@ -406,14 +406,14 @@
   \global\let\@maketitle\relax
   \global\let\@thanks\@empty
   \global\let\@author\@empty
-  \global\let\@ELEGANT@version\@empty
+  \global\let\@ELEGANT@docversion\@empty
   \global\let\@date\@empty
   \global\let\@title\@empty
   \global\let\title\relax
   \global\let\author\relax
   \global\let\date\relax
   \global\let\and\relax
-  \global\let\ELEGANT@version\relax}
+  \global\let\ELEGANT@docversion\relax}
 
 \def\@maketitle{%
   \color{ecolor}
@@ -430,9 +430,9 @@
         \the\institute
       \end{tabular}\par}%
 
-  \IfEmpty\version
+  \IfEmpty\docversion
   \else 
-    {\normalfont\citshape\versiontext\the\version \\}
+    {\normalfont\citshape\versiontext\the\docversion \\}
   \fi
 	\ifx\@date\empty
 	\else 
@@ -530,7 +530,7 @@
     midrule,
     bottomrule,
     institute,
-    version,
+    docversion,
     includegraphics,
     setmainfont,
     setsansfont,
